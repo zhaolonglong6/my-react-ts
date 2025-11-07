@@ -1,0 +1,16 @@
+dist
+node_modules
+index.html
+public
+.husky
+.vscode
+.idea
+*.sh
+*.md
+
+assets
+assets/*.js
+.eslintrc.cjs
+.eslintignore
+.prettierrc
+.prettierignore
