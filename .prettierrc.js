@@ -33,4 +33,6 @@ export default {
   useTabs: false,
   // vue 文件中是否缩进 <style> 和 <script> 标签，默认 false
   vueIndentScriptAndStyle: false,
+  // 换行符 (auto|lf|crlf|cr|preserve;默认auto)
+  endOfLine: "lf",
 };
