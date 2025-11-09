@@ -1,15 +1,13 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function App() {
   return (
     <div>
       <div>APP组件</div>
-      <Link to="/">首页</Link>
-      <Link to="/login">登录</Link>
-      <Link to="/404">404</Link>
-      <Link to="/about">关于</Link>
-      <Link to="/mine">我的</Link>
-      <Outlet />
+      <Link to="/">发现音乐</Link>
+      <Link to="/my">我的音乐</Link>
+      <Link to="/friend">关注</Link>
+      <Link to="/download">下载</Link>
     </div>
   );
 }
