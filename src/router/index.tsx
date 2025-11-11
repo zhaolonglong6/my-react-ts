@@ -15,24 +15,29 @@ import App from "../App";
 export const routes = createBrowserRouter([
   {
     path: "/",
-    Component: () => <Navigate to="/discover" replace />,
-  },
-  {
-    path: "/discover",
     Component: App,
     children: [
-      { path: "", Component: () => <Navigate to="/discover"></Navigate> },
-      { index: true, Component: Discover },
-      { path: "album", Component: Album },
-      { path: "artist", Component: Artist },
-      { path: "djradio", Component: DjRadio },
-      { path: "playlist", Component: Playlist },
-      { path: "toplist", Component: TopList },
+      {
+        index: true,
+        Component: () => <Navigate to="/discover/recommend" replace />,
+      },
+      {
+        path: "discover",
+        children: [
+          { index: true, Component: () => <Navigate to="/discover/recommend" replace /> },
+          { path: "recommend", Component: Discover },
+          { path: "album", Component: Album },
+          { path: "artist", Component: Artist },
+          { path: "djradio", Component: DjRadio },
+          { path: "playlist", Component: Playlist },
+          { path: "toplist", Component: TopList },
+        ],
+      },
+      { path: "friend", Component: Friend },
+      { path: "my", Component: My },
+      { path: "download", Component: Download },
     ],
   },
-  { path: "/friend", Component: Friend },
-  { path: "/my", Component: My },
-  { path: "/download", Component: Download },
   { path: "/login", Component: Login },
   { path: "*", Component: NotFound },
 ]);
