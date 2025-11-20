@@ -1,7 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import NotFound from "../pages/404/404";
 import Login from "../pages/login/Login";
-import Discover from "../pages/discover/Discover";
+import Discover from "../pages/discover/recommend/Discover";
 import Album from "../pages/discover/album/Album";
 import Artist from "../pages/discover/artist/Artist";
 import DjRadio from "../pages/discover/djradio/DjRadio";
@@ -19,7 +19,7 @@ export const routes = createBrowserRouter([
     children: [
       {
         index: true,
-        Component: () => <Navigate to="/discover/recommend" replace />,
+        Component: () => <Navigate to="/discover" replace />,
       },
       {
         path: "discover",

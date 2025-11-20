@@ -6,7 +6,7 @@ interface IProps {
 }
 
 const Playlist: React.FC<IProps> = () => {
-  return <div>Playlist</div>;
+  return <div className="text-red-200 h-[200px]">Playlist</div>;
 };
 
 export default memo(Playlist);
