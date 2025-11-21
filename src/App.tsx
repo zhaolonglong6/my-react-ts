@@ -1,9 +1,17 @@
+import { useSelector } from "react-redux";
 import { Link, Outlet } from "react-router-dom";
+import type { RootState } from "./store";
+import useBearStore from "./zustand";
 
 export default function App() {
+  const count = useSelector((state: RootState) => state.counter.value);
+  const bear = useBearStore((state) => state.bears);
   return (
     <div>
-      <div>APP组件</div>
+      <div>
+        APP组件{count}
+        {bear}
+      </div>
       <Link to="/">发现音乐</Link>
       <Link to="/my">我的音乐</Link>
       <Link to="/friend">关注</Link>

@@ -9,4 +9,9 @@ export default defineConfig({
     open: true,
     port: 80,
   },
+  resolve: {
+    alias: {
+      "@": "/src",
+    },
+  },
 });
